@@ -1,0 +1,19 @@
+{
+  "name": "airbnb_graphql_api_nodejs",
+  "version": "1.0.0",
+  "description": "studentId_comp3133_assig1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatihkgm/AirBnB_GraphQL_Api_NodeJS.git"
+  },
+  "author": "fatih kucukgokmen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fatihkgm/AirBnB_GraphQL_Api_NodeJS/issues"
+  },
+  "homepage": "https://github.com/fatihkgm/AirBnB_GraphQL_Api_NodeJS#readme"
+}
