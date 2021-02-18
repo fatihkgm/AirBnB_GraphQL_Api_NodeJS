@@ -9,21 +9,21 @@ const HotelSchema = new mongoose.Schema({
   },
   street: {
     type: String,
-    alias: 'street',
+    alias: 'streetname',
     required: true,
     trim: true,
     lowercase: true
   },
   city: {
     type: String,
-    alias: 'city',
+    alias: 'cityname',
     required: true,
     trim: true,
     lowercase: true
   },
   postal_code: {
     type: String,
-    alias: 'postal_code',
+    alias: 'postacode',
     required: true,
     trim: true,
     lowercase: true

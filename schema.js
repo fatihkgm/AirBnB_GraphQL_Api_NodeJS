@@ -10,11 +10,13 @@ exports.typeDefs = gql `
      price: Float!
      email: String!
    }
+
    type Query {
      getHotel: [Hotel]
      getHotelByID(id: ID!): Hotel
      getHotelByCity(city: String!): [Hotel]
    }
+
    type Mutation {
      addHotel(hotel_name: String!
         street: String!
