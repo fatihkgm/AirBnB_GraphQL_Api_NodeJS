@@ -1,15 +1,15 @@
-const Employee = require('./models/Hotel');
+const Hotel = require('./models/Hotel');
 
 exports.resolvers = {
     Query: {
         getHotel: async (parent, args) => {
-            return await Employee.find({});
+            return await Hotel.find({});
         },
         getHotelByID: async (parent, args) => {
-            return await Employee.findById(args.id);
+            return await Hotel.findById(args.id);
         },
         getHotelByCity: async (parent, args) => {
-            return await Employee.find({"city" : args.city});
+            return await Hotel.find({"city" : args.city});
         }
     },
     Mutation: {
