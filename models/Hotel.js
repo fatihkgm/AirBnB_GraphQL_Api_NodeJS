@@ -54,6 +54,11 @@ const HotelSchema = new mongoose.Schema({
       return emailRegex.test(value);
     }
   },
+  created: { 
+    type: Date,
+    default: Date.now,
+    alias: 'createdAt'
+  },
 });
 
 const Hotel = mongoose.model("Hotel", HotelSchema);
