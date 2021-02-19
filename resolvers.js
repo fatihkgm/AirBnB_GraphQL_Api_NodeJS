@@ -1,4 +1,6 @@
 const Hotel = require('./models/Hotel');
+const User = require('./models/User');
+const Booking = require('./models/Booking');
 
 
 exports.resolvers = {
@@ -6,13 +8,20 @@ exports.resolvers = {
         getHotel: async (parent, args) => {
             return await Hotel.find({});
         },
+        getUser: async (parent, args) => {
+            return await User.find({});
+        },
+        getBooking: async (parent, args) => {
+            return await Booking.find({});
+        },
         getHotelByID: async (parent, args) => {
             return await Hotel.findById(args.id);
         },
         getHotelByCity: async (parent, args) => {
             return await Hotel.find({"city" : args.city});
-        }
+        },
     },
+   
     Mutation: {
         addHotel: async (parent, args) => {
             console.log(args)
@@ -34,6 +43,8 @@ exports.resolvers = {
             });
         return await newHotel.save();
       },
+      
+
       updateHotel: async (parent, args) => {
             console.log(args)
             if (!args.id){

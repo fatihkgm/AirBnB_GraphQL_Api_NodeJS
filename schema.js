@@ -10,8 +10,24 @@ const { gql } = require('apollo-server-express');
       price: Float!
       email: String!
     }
+    type User {
+      username: String!
+      useremail: String!
+      password: String!
+    }
+    type Booking {
+     book: [User !]
+     creator:[User !]
+     
+     date:String
+     
+
+      
+    }
     type Query {
       getHotel: [Hotel]
+      getUser:[User]
+      getBooking:[Booking]
       getHotelByID(id: ID!): Hotel
       getHotelByCity(city: String!): [Hotel]
     }
@@ -30,5 +46,11 @@ const { gql } = require('apollo-server-express');
          price: Float!
          email: String!): Hotel
       deleteHotel(id: ID!): Hotel
+      addUser(
+         username: String!
+         useremail: String!
+         password: String!):User
+      addBooking(
+         date:String):Booking  
     }
  ` 

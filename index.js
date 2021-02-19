@@ -21,7 +21,7 @@ const connect = mongoose.connect(url,
 });
 
 connect.then((db) => {
-      console.log('Connected correctly to server!');
+      console.log(' ⚪️ Connected correctly to server ⚪️ !');
 }, (err) => {
       console.log(err);
 });
@@ -38,4 +38,4 @@ app.use(bodyParser.json());
 app.use('*', cors());
 server.applyMiddleware({ app });
 app.listen({ port: process.env.PORT }, () =>
-console.log(`🚀 Server ready at http://localhost:${process.env.PORT}${server.graphqlPath}`));
+console.log(`📌  Server ready at http://localhost:${process.env.PORT}${server.graphqlPath}`));
