@@ -7,6 +7,9 @@
     ✔️ Create an .env file and make your connections 
           PORT = 9999
           MONGODB_URL = mongodb+srv://<username>:<password>@cluster0.vfuyu.mongodb.net/<dataname>?retryWrites=true&w=majority
+    
+   
+ ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/63836841/108565746-3521b700-72d3-11eb-9f47-ebaa4e9be889.gif)
 
     ✔️ click or enter on browser  http://localhost:9999/graphql
     ✔️ add and try
@@ -51,4 +54,6 @@
          query { getHotel{ hotel_name street id } }
 
      ✔️ Check your Mongo collections and Enjoy it 😀
+     
+    
 
