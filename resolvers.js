@@ -67,7 +67,18 @@ exports.resolvers = {
             });
         return await newUser.save();
         },
-
+        addBooking: async (parent, args) => {
+            
+                let newBooking = new Booking({
+                    booking_date: args.booking_date,
+                    booking_start: args.booking_start,
+                    booking_end: args.booking_end,
+                    user_id: args.user_id,
+                   
+                    
+                });
+            return await newBooking.save();
+        },
 
 
 

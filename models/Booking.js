@@ -3,20 +3,26 @@ const mongoose = require('mongoose');
 const BookingSchema = new mongoose.Schema({
     
     booking_date: {
-        type: Date,
+        type: String,
         required: true
     },
     
     booking_start:{
-      type: Date,
+      type: String,
       required: [true, 'Enter start date'],
     },
 
     booking_end: {
-      type: Date,
+      type: String,
       required: [true, 'Enter start date'],
-    },
+    },user_id:{
+      type: String,
+      required: [true],
+      trim: true,
+      lowercase: true
+    }
 
+    
     // date: {
     //     type: Date,
     //     required: true

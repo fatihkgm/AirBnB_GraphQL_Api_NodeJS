@@ -18,16 +18,11 @@ const { gql } = require('apollo-server-express');
       password: String!
     }
     type Booking {
-     id: ID!
-     book: [User !]
-     creator:[User !]
-     
+     id: ID! 
      booking_date:String
      booking_start:String!
-     booking_end:String!
-     
-
-      
+     booking_end:String! 
+     user_id:String!
     }
     type Query {
       getHotel: [Hotel]
@@ -69,12 +64,12 @@ const { gql } = require('apollo-server-express');
          booking_date:String
          booking_start:String
          booking_end:String
-         ):Booking  
+         user_id:String!):Booking  
       updateBooking(
             booking_date:String
             booking_start:String
             booking_end:String
-         ):Booking   
+            user_id:String!):Booking   
          
     }
  ` 
