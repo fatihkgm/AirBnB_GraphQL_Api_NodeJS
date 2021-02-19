@@ -1,4 +1,6 @@
 const Hotel = require('./models/Hotel');
+const User = require('./models/User');
+const Booking = require('./models/Booking');
 
 exports.resolvers = {
     Query: {
@@ -10,6 +12,15 @@ exports.resolvers = {
         },
         getHotelByCity: async (parent, args) => {
             return await Hotel.find({"city" : args.city});
+        },
+        getUser: async (parent, args) => {
+            return await User.find({});
+        },
+        getUserByID: async (parent, args) => {
+            return await User.findById(args.id);
+        },
+        getBooking: async (parent, args) => {
+            return await Booking.find({});
         }
     },
     Mutation: {
@@ -69,5 +80,31 @@ exports.resolvers = {
         }
         return await Hotel.findByIdAndDelete(args.id)
       },
+      addUser: async (parent, args) => {
+        console.log(args)
+        const emailExpression = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        const isValidEmail =  emailExpression.test(String(args.email).toLowerCase())
+        
+        if(!isValidEmail){
+            throw new Error("email not in proper format")
+        }
+
+        let newUser = new User({
+            username: args.username,
+            
+        });
+            return await newUser.save();
+        },
+        addBooking: async (parent, args) => {
+            console.log(args)
+            
+    
+            let newBooking = new Booking({
+                date: args.date,
+                creator: args.creator
+                
+            });
+                return await newBooking.save();
+            },
     }
   }

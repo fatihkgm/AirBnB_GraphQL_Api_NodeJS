@@ -48,11 +48,6 @@ exports.typeDefs = gql `
         postal_code: String!
         price: Float!
         email: String!): Hotel
-      addUser(username: String!
-        email:String!
-        
-
-      )
      updateHotel(id: String!,
         hotel_name: String!
         street: String!
@@ -61,5 +56,10 @@ exports.typeDefs = gql `
         price: Float!
         email: String!): Hotel
      deleteHotel(id: ID!): Hotel
+     addUser(username: String!
+      email:String!
+      password: String!): User
+     addBooking(hotel: String!
+      date:String!   
    }
 `

@@ -26,7 +26,7 @@ connect.then((db) => {
       console.log(err);
 });
 
-//Define Apollo Server
+//Define Apollo Serverempl
 const server = new ApolloServer({
       typeDefs: TypeDefs.typeDefs,
       resolvers: Resolvers.resolvers
