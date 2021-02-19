@@ -15,8 +15,7 @@ exports.typeDefs = gql `
     id: ID!
     date: String!
     creator: User!
-    createdAt: String!
-    updatedAt: String!
+    created: String!
    }
 
    type User {
@@ -37,8 +36,7 @@ exports.typeDefs = gql `
      getBooking:[Booking]
      getHotelByID(id: ID!): Hotel
      getHotelByCity(city: String!): [Hotel]
-     getUserByID(id: ID!): User
-     getBookingByID(id: ID!):
+   
    }
 
    type Mutation {

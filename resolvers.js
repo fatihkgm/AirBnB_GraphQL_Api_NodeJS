@@ -16,9 +16,6 @@ exports.resolvers = {
         getUser: async (parent, args) => {
             return await User.find({});
         },
-        getUserByID: async (parent, args) => {
-            return await User.findById(args.id);
-        },
         getBooking: async (parent, args) => {
             return await Booking.find({});
         }
@@ -107,4 +104,5 @@ exports.resolvers = {
                 return await newBooking.save();
             },
     }
-  }
+}
+
