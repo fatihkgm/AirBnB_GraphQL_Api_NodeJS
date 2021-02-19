@@ -10,20 +10,25 @@
 
     ✔️ click or enter on browser  http://localhost:9999/graphql
     ✔️ add 
-         mutation {
-             addHotel (
-                 hotel_name:"TheKgm",
-                 street:"Citation",
-                 city:"London",
-                 postal_code:"N6DH5",
-                 price:10000.50,
-                 email:"thekgmweb@kgm.com")
-             {
-                 hotel_name
-                 street
-             }
-             }
-
+      mutation {
+         addHotel (
+             hotel_name:"greenhotel",
+             street:"STREET",
+             city:"KINGSTON",
+             postal_code:"N6DH5",
+             price:1456,
+             user_id:"2",
+             email:"thekgb@kgm.com"
+  					 )
+         {
+             hotel_name
+             street
+             city
+          	postal_code
+          price
+          user_id
+         }
+         }
 
       ✔️ Run the code on play icon
       ✔️ add 
