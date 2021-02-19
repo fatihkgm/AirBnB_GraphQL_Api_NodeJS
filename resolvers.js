@@ -20,6 +20,12 @@ exports.resolvers = {
         getHotelByCity: async (parent, args) => {
             return await Hotel.find({"city" : args.city});
         },
+        getUserByID: async (parent, args) => {
+            return await User.findById(args.id);
+        },
+        getBookingByID: async (parent, args) => {
+            return await Booking.findById(args.id);
+        },
     },
    
     Mutation: {
@@ -39,11 +45,31 @@ exports.resolvers = {
                 postal_code:args.postal_code,
                 price:args.price,
                 email: args.email,
+                user_id: args.user_id,
                 
             });
         return await newHotel.save();
       },
-      
+      addUser: async (parent, args) => {
+        console.log(args)
+        const emailExpression = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        const isValidEmail =  emailExpression.test(String(args.useremail).toLowerCase())
+        
+        if(!isValidEmail){
+            throw new Error("email not in proper format")
+        }
+
+            let newUser = new User({
+                username: args.username,
+                useremail: args.useremail,
+                password: args.password,
+                
+            });
+        return await newUser.save();
+        },
+
+
+
 
       updateHotel: async (parent, args) => {
             console.log(args)

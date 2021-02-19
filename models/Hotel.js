@@ -56,6 +56,12 @@ const HotelSchema = new mongoose.Schema({
       return emailRegex.test(value);
     }
   },
+  user_id: {
+    type: String,
+    required: [true],
+    trim: true,
+    lowercase: true
+  },
   created: { 
     type: Date,
     default: Date.now,
