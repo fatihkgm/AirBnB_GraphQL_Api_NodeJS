@@ -11,10 +11,34 @@ exports.typeDefs = gql `
      email: String!
    }
 
+   type Booking {
+    id: ID!
+    date: String!
+    creator: User!
+    createdAt: String!
+    updatedAt: String!
+   }
+
+   type User {
+    id: ID!
+    username:String!
+    email: String!
+    password: String!
+
+   }
+
+
+
+
+
    type Query {
      getHotel: [Hotel]
+     getUser: [User]
+     getBooking:[Booking]
      getHotelByID(id: ID!): Hotel
      getHotelByCity(city: String!): [Hotel]
+     getUserByID(id: ID!): User
+     getBookingByID(id: ID!):
    }
 
    type Mutation {
@@ -24,6 +48,11 @@ exports.typeDefs = gql `
         postal_code: String!
         price: Float!
         email: String!): Hotel
+      addUser(username: String!
+        email:String!
+        
+
+      )
      updateHotel(id: String!,
         hotel_name: String!
         street: String!
