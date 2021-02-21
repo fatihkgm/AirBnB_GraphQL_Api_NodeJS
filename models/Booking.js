@@ -17,7 +17,6 @@ const BookingSchema = new mongoose.Schema({
       required: [true, 'Enter start date'],
     },user_id:{
       type: String,
-      required: [true],
       trim: true,
       lowercase: true
     }
