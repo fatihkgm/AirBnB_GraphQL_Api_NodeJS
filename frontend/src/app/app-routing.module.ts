@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component'
 import { LoginComponent } from './login/login.component'
 import { LogoutComponent } from './logout/logout.component'
 import { AboutComponent } from './about/about.component'
-import { ValidationguardGuard } from './validationguard.guard';
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
