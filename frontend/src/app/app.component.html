@@ -85,19 +85,20 @@
               >
             </li>
             <li class="nav-item link">
-              <a
-                class="nav-link link"
-                routerLink="/login" >Login</a
-              >
-            </li>
-            <li class="nav-item link">
-              
+              <div *ngIf="isValid; else isLogout">
               <a
                 class="nav-link link"
                 routerLink="/logout"
                 
                 >Logout</a
-              >
+              ></div>
+            </li>
+            <li class="nav-item link">
+              <ng-template #isLogout>
+              <a
+                class="nav-link link"
+                routerLink="/login" >Login</a
+              >  </ng-template>
             </li>
             <li class="nav-item link">
               <a

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  isValid = false;
+
+  ngOnInit(): void {
+    let val = localStorage.getItem('isValidUser')
+
+    if(val != null && val == 'true'){
+        this.isValid = true
+    }else{
+      this.isValid = false
+    }
+  }
 }
