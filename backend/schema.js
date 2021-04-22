@@ -1,6 +1,7 @@
 const { gql } = require('apollo-server-express');
-
- exports.typeDefs = gql `
+const { typeDefs } = require('graphql');
+ 
+exports.typeDefs = gql `
     type Hotel {
       id: ID!
       hotel_name: String!

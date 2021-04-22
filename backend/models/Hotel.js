@@ -5,30 +5,19 @@ const mongoose = require('mongoose');
 const HotelSchema = new mongoose.Schema({
   hotel_name: {
     type: String,
-    required: [true, 'Please enter hotel name'],
-    trim: true,
-    lowercase: true
+    required: true,
   },
   street: {
     type: String,
-    alias: 'streetname',
     required: true,
-    trim: true,
-    lowercase: true
   },
   city: {
     type: String,
-    alias: 'cityname',
     required: true,
-    trim: true,
-    lowercase: true
   },
   postal_code: {
     type: String,
-    alias: 'postacode',
     required: true,
-    trim: true,
-    lowercase: true
   },
   price: {
     type: Number,
@@ -45,7 +34,7 @@ const HotelSchema = new mongoose.Schema({
     type: String,
     required: true,
     //index: true, //Optional if unique is defined
-    unique: [true, "Duplicate Email Not allowed"],
+    unique: true,
     trim: true,
     uppercase: true,
     //minlength:10,
@@ -59,8 +48,6 @@ const HotelSchema = new mongoose.Schema({
   user_id: {
     type: String,
     required: [true],
-    trim: true,
-    lowercase: true
   },
   created: { 
     type: Date,

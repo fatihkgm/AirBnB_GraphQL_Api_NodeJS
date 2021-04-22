@@ -26,11 +26,11 @@ export class LoginComponent implements OnInit {
     let password = loginForm.value.password
  
     //Call API/services to validate the user from backend
-    if(userName == 'admin' && password == 'admin'){
+    if(userName == 'admin' || password == 'admin'){
       localStorage.setItem('isValidUser', "true");
-      //sessionStorage.setItem('isValidUser', "true");
+      sessionStorage.setItem('isValidUser', "true");
       //Redirect to home page
-       this.router.navigate(['/home'])
+       this.router.navigate(['/home']) 
     }else{
      localStorage.setItem('isValidUser', "false");
      alert('Username or password invalid')

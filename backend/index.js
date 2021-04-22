@@ -5,6 +5,7 @@ const Resolvers = require('./resolvers');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { ApolloServer } = require('apollo-server-express');
+const { graphqlHTTP } = require('express-graphql');
 
 //Store sensetive information to env variables
 const dotenv = require('dotenv');
@@ -19,6 +20,8 @@ const connect = mongoose.connect(url,
       useNewUrlParser: true,
       useUnifiedTopology: true
 });
+
+
 
 connect.then((db) => {
       console.log(' ⚪️ Connected correctly to server ⚪️ !');

@@ -8,20 +8,19 @@ import gql from "graphql-tag";
   styleUrls: ['./hotels.component.css']
 })
 export class HotelsComponent implements OnInit {
-  Bookings: any[] = [];
+  books: any[] = [];
   loading = true;
   constructor(private apollo: Apollo) { }
 
   ngOnInit(): void {
     this.apollo.query<any>({
-      query:gql `{Booking{id booking_date booking_start booking_end}}`
+      query:gql `{Booking{booking_id booking_date booking_start booking_end}}`
     })
     .subscribe(
       ({data,loading}) =>{
-        this.Bookings = data && data.Booking;
+        this.books = data && data.Booking;
         this.loading = loading;
       }
     );
   }
-
 }
