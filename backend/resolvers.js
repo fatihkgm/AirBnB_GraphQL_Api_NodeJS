@@ -74,7 +74,6 @@ exports.resolvers = {
                     booking_start: args.booking_start,
                     booking_end: args.booking_end,
                     user_id: args.user_id,
-                   
                     
                 });
             return await newBooking.save();

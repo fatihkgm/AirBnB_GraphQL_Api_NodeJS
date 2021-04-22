@@ -9,8 +9,10 @@ import { LogoutComponent } from './logout/logout.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 
+
 import {FormsModule} from '@angular/forms';
-import { RegistrationComponent } from './registration/registration.component'
+import { RegistrationComponent } from './registration/registration.component';
+import { HotelsComponent } from './hotels/hotels.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { RegistrationComponent } from './registration/registration.component'
     LogoutComponent,
     AboutComponent,
     HomeComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    HotelsComponent
   ],
   imports: [
     BrowserModule,
