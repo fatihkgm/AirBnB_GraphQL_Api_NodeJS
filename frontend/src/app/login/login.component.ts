@@ -30,7 +30,8 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('isValidUser', "true");
       sessionStorage.setItem('isValidUser', "true");
       //Redirect to home page
-       this.router.navigate(['/home']) 
+       this.router.navigate(['/home'])
+       alert('success') 
     }else{
      localStorage.setItem('isValidUser', "false");
      alert('Username or password invalid')

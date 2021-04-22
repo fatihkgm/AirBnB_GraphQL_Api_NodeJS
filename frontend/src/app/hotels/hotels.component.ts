@@ -14,11 +14,11 @@ export class HotelsComponent implements OnInit {
 
   ngOnInit(): void {
     this.apollo.query<any>({
-      query:gql `{Booking{booking_id booking_date booking_start booking_end}}`
+      query:gql `{getBooking{user_id booking_date booking_start booking_end}}`
     })
     .subscribe(
       ({data,loading}) =>{
-        this.books = data && data.Booking;
+        this.books = data && data.books;
         this.loading = loading;
       }
     );

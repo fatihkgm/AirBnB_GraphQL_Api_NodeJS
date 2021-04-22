@@ -11,11 +11,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let Booking of books">
-          <th scope="row">{{Booking.booking_id}}</th>
-        <td>{{Booking.booking_date}}</td>
-        <td>{{Booking.booking_start}}</td>
-        <td>{{Booking.booking_end}}</td>
+        <tr *ngFor="let getBooking of books">
+          <th scope="row">{{getBooking.user_id}}</th>
+        <td>{{getBooking.booking_date}}</td>
+        <td>{{getBooking.booking_start}}</td>
+        <td>{{getBooking.booking_end}}</td>
         </tr>
       </tbody>
     </table>
