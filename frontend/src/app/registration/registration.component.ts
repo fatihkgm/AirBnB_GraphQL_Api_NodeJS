@@ -11,7 +11,7 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onSubmit(loginForm:NgForm) {
+  onSubmit(registerForm:NgForm) {
 
   }
 }
