@@ -8,6 +8,7 @@ import { LogoutComponent } from './logout/logout.component'
 import { AboutComponent } from './about/about.component'
 import { HotelsComponent } from './hotels/hotels.component';
 import { BookingComponent } from './booking/booking.component';
+import { AddhotelComponent } from './addhotel/addhotel.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'hotel', component: HotelsComponent},
   {path: 'registration' , component: RegistrationComponent},
   { path: 'logout', component: LogoutComponent},
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  {path: 'addhotel' , component: AddhotelComponent},
+  { path: '', redirectTo: 'about', pathMatch: 'full' }
 ];
 
 @NgModule({

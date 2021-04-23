@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('isValidUser', "true");
       sessionStorage.setItem('isValidUser', "true");
       //Redirect to home page
-       this.router.navigate(['/home'])
+       this.router.navigate(['/hotel'])
        alert('success') 
     }else{
      localStorage.setItem('isValidUser', "false");

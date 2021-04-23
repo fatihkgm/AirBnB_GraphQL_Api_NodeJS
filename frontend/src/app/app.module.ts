@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +14,8 @@ import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { HotelsComponent } from './hotels/hotels.component';
-import { BookingComponent } from './booking/booking.component'
+import { BookingComponent } from './booking/booking.component';
+import { AddhotelComponent } from './addhotel/addhotel.component'
 
 @NgModule({
   declarations: [
@@ -24,14 +26,16 @@ import { BookingComponent } from './booking/booking.component'
     HomeComponent,
     RegistrationComponent,
     HotelsComponent,
-    BookingComponent
+    BookingComponent,
+    AddhotelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GraphQLModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

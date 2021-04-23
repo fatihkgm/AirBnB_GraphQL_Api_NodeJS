@@ -14,7 +14,7 @@ export class HotelsComponent implements OnInit {
 
   ngOnInit(): void {
     this.apollo.query<any>({
-      query:gql `{getBooking{user_id booking_date booking_start booking_end}}`
+      query:gql `{getHotel{hotel_name price street city postal_code email}}`
     })
     .subscribe(
       ({data,loading}) =>{

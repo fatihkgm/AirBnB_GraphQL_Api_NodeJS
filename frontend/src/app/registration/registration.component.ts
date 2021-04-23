@@ -12,6 +12,6 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(registerForm:NgForm) {
-
+    alert("Successfully registered.Please login now")
   }
 }
